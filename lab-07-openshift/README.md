@@ -2,7 +2,7 @@
 
 IMPORTANT Note: this lab only covers the general steps to prepare our application for OpenShift. Actually deploying depends on the target cluster. One option is deploying to a local OpenShift instance called Minishift, check the lab-xx-minishift on how to set-up minishift:
 
-[Lab xx - Minishift lab](../lab-xx-minishift) 
+[Lab xx - CRC lab](../lab-xx-crc) 
 
 In this lab we're going to prepare our application to be deployed on OpenShift. To do so we're going to rely on these OpenShift concepts:
 
@@ -64,9 +64,9 @@ In the same yml, provide an appropriate Service definition of type LoadBalancer 
 
 In the same yml, provide an appropriate Route definition that will route to the Service above and enables tls passthrough termination.
 
-# Upload a Docker image to the OpenShift registry
+# Upload a container image to the OpenShift registry
 
-Do a Docker build of your application and upload this image to the OpenShift docker registry
+Do a Podman build of your application and upload this image to the OpenShift container registry
 
 # OpenShift apply
 

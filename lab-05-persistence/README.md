@@ -6,25 +6,49 @@ We'll choose Postgres as a common database solution.
 
 ## Run Postgres locally
 
-When developing locally we'll run postgres through a docker container, this can be easily done by running this command. The first time we run this the postgres docker image will be downloaded:
+When developing locally we'll run postgres through a container container, this can be easily done by running this command. The first time we run this the postgres container image will be downloaded:
 
 ```
-docker run -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+podman run -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
 ```
 
 Example successful output:
 ```
-Unable to find image 'postgres:latest' locally
-latest: Pulling from library/postgres
-6ae821421a7d: Pull complete
-...
-67d715e4939e: Pull complete
-Digest: sha256:f310592cf3964f038dbaefac2dc2088982e5ab06312a590bcacc97749ee5db69
-Status: Downloaded newer image for postgres:latest
-6d646f5860aa796e2decbce4ffb51b91faf196fb1b2df92db21e27c947d3b33e
+Resolving "postgres" using unqualified-search registries (/etc/containers/registries.conf.d/999-podman-machine.conf)
+Trying to pull docker.io/library/postgres:latest...
+Getting image source signatures
+Copying blob sha256:6530357dda9a856600bb73f3894189a51697b46e7ddaac67782bc3fa150f3d6c
+Copying blob sha256:1fe172e4850f03bb45d41a20174112bc119fbfec42a650edbbd8491aee32e3c3
+Copying blob sha256:c2bb685f623fe10169c69d4ec74547c0dd090744f323a73e91ec298ae49198cd
+Copying blob sha256:b1d302dc78c63f82eeaf3acc796a480b1c2ba421d011a73e7ea03a2f629bf86d
+Copying blob sha256:3027ff70541005e6dc087e541c306590f84da7ab2737fa8ee9e4acb2ef7b54d8
+Copying blob sha256:062371e3461d10dd17b37b174c5204709e4a828de004ae80ef44a9776c3b693a
+Copying blob sha256:39d54e944de74ab373566c980af765f066053a6c2f12274a7ee808e7cfc56158
+Copying blob sha256:b1d302dc78c63f82eeaf3acc796a480b1c2ba421d011a73e7ea03a2f629bf86d
+Copying blob sha256:6530357dda9a856600bb73f3894189a51697b46e7ddaac67782bc3fa150f3d6c
+Copying blob sha256:c2bb685f623fe10169c69d4ec74547c0dd090744f323a73e91ec298ae49198cd
+Copying blob sha256:39d54e944de74ab373566c980af765f066053a6c2f12274a7ee808e7cfc56158
+Copying blob sha256:062371e3461d10dd17b37b174c5204709e4a828de004ae80ef44a9776c3b693a
+Copying blob sha256:f6d91cb1d3c135c4731590eb6940aa236226e03bc47569827209a515fcc7a085
+Copying blob sha256:3027ff70541005e6dc087e541c306590f84da7ab2737fa8ee9e4acb2ef7b54d8
+Copying blob sha256:9bbd62b0af2872ac19989dd6d99985e04efad1768505c10bced7b7dcf5b1b65f
+Copying blob sha256:3cfdfc8fbef3077a84eab008599ccf444967f5dc6c8b8bac3c40421ac6b2f5c2
+Copying blob sha256:635f8fae1d0617c496c561c228d8642c2c4823d945c647cf6a6ffb8e6c7cc7a0
+Copying blob sha256:9bbd62b0af2872ac19989dd6d99985e04efad1768505c10bced7b7dcf5b1b65f
+Copying blob sha256:f6d91cb1d3c135c4731590eb6940aa236226e03bc47569827209a515fcc7a085
+Copying blob sha256:96b6711661dda05f9b7808313c5467d8cfd56c8f2d9903307a181457544b2b2d
+Copying blob sha256:3cfdfc8fbef3077a84eab008599ccf444967f5dc6c8b8bac3c40421ac6b2f5c2
+Copying blob sha256:c08147da7b54ad4311cf3ebb22f8d68da5e5c67b911ba6cef66126605a55f501
+Copying blob sha256:635f8fae1d0617c496c561c228d8642c2c4823d945c647cf6a6ffb8e6c7cc7a0
+Copying blob sha256:96b6711661dda05f9b7808313c5467d8cfd56c8f2d9903307a181457544b2b2d
+Copying blob sha256:c08147da7b54ad4311cf3ebb22f8d68da5e5c67b911ba6cef66126605a55f501
+Copying config sha256:74b0c105737a84fd66dc0fbe8e6cf670eba092c9bcdd02430ad059615372376f
+Writing manifest to image destination
+Storing signatures
+87add553c5f529ce1addfc3ba44e8d5b1b834003671bb1c1ff81098a9ae34ce1
 ```
 
-For more information about the usage of this Docker image see:
+For more information about the usage of this container image see:
 
 https://hub.docker.com/_/postgres
 
