@@ -31,7 +31,7 @@ Create a free private git account and fork this repository to start implementing
 
 * [01 - Spring Boot Application](lab-01-spring-boot)
 * [02 - REST API](lab-02-rest-api)
-* [03 - Docker](lab-03-docker)
+* [03 - Podman](lab-03-podman)
 * [04 - External API Integration](lab-04-external-api)
 * [05 - Persistence](lab-05-persistence)
 * [06 - JPA](lab-06-jpa)
